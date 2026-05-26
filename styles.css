@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ember &amp; Earth — Woodfired Sauna &amp; Massage · Yarra Valley ECOSS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
+:root{
     --paper:#f6f1e6;--paper-2:#efe7d8;--cream:#fcfaf4;
     --ink:#2c2b24;--ink-soft:#5c5849;--ink-faint:#8a8472;
     --forest:#3c4a31;--forest-deep:#2c3724;--moss:#67764c;--sage:#97a677;
@@ -101,29 +91,24 @@
   .price-card .amt{font-family:var(--serif);font-size:3.6rem;line-height:1}
   .price-card .amt sup{font-size:1.3rem;vertical-align:super;color:#f3c9a8}
   /* OFFERINGS */
-  .offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:stretch}
-  .offer{display:flex;flex-direction:column;background:var(--cream);border:1px solid var(--line);border-radius:22px;padding:30px 26px 28px;position:relative;transition:.35s}
+  .offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+  .offer{display:flex;flex-direction:column;background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:30px 24px;position:relative;transition:.35s}
   .offer:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-  .offer .o-kind{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);font-weight:600}
-  .offer .offer-top h3{font-size:1.32rem;margin-top:10px;min-height:2.6em}
-  .offer .o-price{display:flex;align-items:baseline;gap:10px;margin:16px 0 4px;flex-wrap:wrap}
-  .offer .o-price .amt{font-family:var(--serif);font-size:2.7rem;line-height:1;color:var(--forest-deep)}
-  .offer .o-price .amt sup{font-size:1rem;vertical-align:super;color:var(--clay)}
-  .offer .o-per{font-size:.78rem;color:var(--ink-faint);letter-spacing:.04em}
-  .offer .o-desc{color:var(--ink-soft);font-weight:300;font-size:.94rem;margin:14px 0 18px}
-  .offer .o-feat{list-style:none;display:grid;gap:9px;margin-bottom:24px}
-  .offer .o-feat li{position:relative;padding-left:22px;font-size:.9rem;color:var(--ink-soft);font-weight:300}
-  .offer .o-feat li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:50%;background:var(--sage)}
+  .offer .o-kind{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:600}
+  .offer h3{font-size:1.26rem;margin:9px 0 0;line-height:1.22;min-height:2.4em}
+  .offer .o-price{display:flex;align-items:baseline;gap:8px;margin-top:18px}
+  .offer .o-price .amt{font-family:var(--serif);font-size:2.5rem;line-height:1;color:var(--forest-deep)}
+  .offer .o-price .amt sup{font-size:1rem;vertical-align:super;top:-.7em;color:var(--clay)}
+  .offer .o-per{font-size:.76rem;color:var(--ink-faint);letter-spacing:.03em}
+  .offer .o-desc{color:var(--ink-soft);font-weight:300;font-size:.92rem;line-height:1.55;margin:14px 0 24px}
   .offer .o-btn{margin-top:auto;justify-content:center;width:100%}
-  .offer.feature{background:var(--forest);border-color:var(--forest);box-shadow:var(--shadow)}
-  .offer.feature .o-kind{color:#f3c9a8}
-  .offer.feature .offer-top h3,.offer.feature .o-price .amt{color:var(--cream)}
-  .offer.feature .o-price .amt sup{color:#f3c9a8}
-  .offer.feature .o-per{color:#c2cbb0}
-  .offer.feature .o-desc{color:#e3e7d9}
-  .offer.feature .o-feat li{color:#d7dccb}
-  .offer.feature .o-feat li::before{background:var(--clay-soft)}
-  .offer .o-flag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--clay);color:var(--cream);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:6px 14px;border-radius:30px;white-space:nowrap}
+  .offer.featured{background:var(--forest);border-color:var(--forest);box-shadow:var(--shadow)}
+  .offer.featured .o-kind{color:#f3c9a8}
+  .offer.featured h3,.offer.featured .o-price .amt{color:var(--cream)}
+  .offer.featured .o-price .amt sup{color:#f3c9a8}
+  .offer.featured .o-per{color:#c2cbb0}
+  .offer.featured .o-desc{color:#e3e7d9}
+  .offer .o-flag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--clay);color:var(--cream);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:5px 13px;border-radius:30px;white-space:nowrap}
   .o-note{text-align:center;color:var(--ink-soft);font-weight:300;margin-top:38px;font-size:.95rem}
   .o-note a{color:var(--clay);border-bottom:1px solid currentColor}
   /* RITUAL explainer */
@@ -303,7 +288,7 @@
     .feature-art{order:-1}.feature-art .fimg{aspect-ratio:16/11}
     .journey-grid,.exp-grid{grid-template-columns:1fr}
     .offer-grid{grid-template-columns:repeat(2,1fr)}
-    .offer.feature{grid-column:1 / -1}
+    .offer.featured{grid-column:1 / -1}
     .offer .offer-top h3{min-height:0}
     .ritual-grid{grid-template-columns:1fr}
     .navlinks{display:none}
@@ -318,297 +303,82 @@
     .wrap{padding:0 20px}nav{padding:16px 20px}.pad{padding:74px 0}
     .booking-head,.booking-body,.steps-bar{padding-left:22px;padding-right:22px}
     .field.two{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}
-    .offer-grid{grid-template-columns:1fr}.offer.feature{grid-column:auto}
+    .offer-grid{grid-template-columns:1fr}.offer.featured{grid-column:auto}
     .hero-panel{padding:30px 26px 32px}.hero .wrap{padding-bottom:48px}
   }
-</style>
-</head>
-<body>
+  /* ============ INTERIOR PAGES (About / Vouchers / Contact) ============ */
+  /* Interior pages have a solid header from the start (no photo hero) */
+  body.interior header{background:rgba(246,241,230,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
+  body.interior header .logo{color:var(--forest-deep);text-shadow:none}
+  body.interior header .logo .amp{color:var(--clay)}
+  body.interior header .navlinks a{color:var(--ink-soft);text-shadow:none}
+  body.interior header .navlinks a:hover{color:var(--ink)}
+  body.interior header .navlinks a:not(.btn)::after{background:var(--clay)}
+  body.interior header .navlinks a.btn{color:var(--cream)}
+  body.interior header .menu-toggle{color:var(--forest-deep)}
+  body.interior{padding-top:0}
 
-<header id="hdr">
-  <nav>
-    <a class="logo" href="#top">
-      <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 4c-1.2 5-6 6-6 11a6 6 0 0012 0c0-3-2-5-3-8-1 2-2 3-3 5z" fill="#bc6a42"/><path d="M16 10c-.6 2.4-3 3-3 6.2A3 3 0 0019 16c0-1.5-1-2.5-1.6-4-.5 1-1 1.3-1.4 1.9z" fill="#d3895f"/></svg>
-      Ember <span class="amp">&amp;</span> Earth
-    </a>
-    <div class="navlinks" id="navlinks">
-      <a href="#offerings">Offerings</a>
-      <a href="#experience">Experience</a>
-      <a href="#woodfired">Woodfired</a>
-      <a href="#location">Find Us</a>
-      <a href="#faq">FAQ</a>
-      <a href="#book" class="btn clay" onclick="openBooking();return false;">Book a session</a>
-    </div>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-  </nav>
-</header>
+  .page-hero{padding:150px 0 60px;text-align:center;background:var(--paper-2);border-bottom:1px solid var(--line-soft);position:relative}
+  .page-hero h1{font-size:clamp(2.6rem,5.5vw,4.2rem);color:var(--forest-deep);margin-top:16px}
+  .page-hero p.lede{max-width:60ch;margin:20px auto 0;color:var(--ink-soft);font-weight:300;font-size:1.12rem}
 
-<section class="hero" id="top">
-  <div class="hero-bg">
-    <img src="hero.png" alt="Massage table and woodfired barrel sauna in a forest clearing">
-  </div>
-  <div class="wrap">
-    <div class="hero-panel">
-      <span class="eyebrow">Woodfired sauna &amp; massage · Yarra Valley</span>
-      <h1>Warm the body,<br><span class="ital">soften</span> the mind.</h1>
-      <p class="lead">A woodfired barrel sauna and an unhurried massage, set among the gardens and bushland of Yarra Valley ECOSS.</p>
-      <div class="hero-cta">
-        <a href="#book" class="btn clay" onclick="openBooking();return false;">Book the journey
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="#offerings" class="btn ghost" style="border-color:rgba(255,255,255,.45);color:#fff">See offerings</a>
-      </div>
-    </div>
-  </div>
-  <a href="#journey" class="scroll-hint" aria-label="Scroll down">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
-  </a>
-</section>
+  /* Practitioners */
+  .prac-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:8px}
+  .prac{background:var(--cream);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:.35s}
+  .prac:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .prac-photo{aspect-ratio:4/3;background:linear-gradient(135deg,var(--paper-2),var(--clay-pale));position:relative;overflow:hidden}
+  .prac-photo img{width:100%;height:100%;object-fit:cover}
+  .prac-photo .ph-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--sage)}
+  .prac-body{padding:30px 30px 32px}
+  .prac-body .o-kind{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:600}
+  .prac-body h3{font-size:1.7rem;margin:8px 0 4px;color:var(--forest-deep)}
+  .prac-body .role{font-style:italic;color:var(--moss);font-family:var(--serif);font-size:1.05rem;margin-bottom:16px}
+  .prac-body p{color:var(--ink-soft);font-weight:300;margin-bottom:14px}
+  .prac-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .prac-tags span{font-size:.76rem;background:var(--paper-2);border:1px solid var(--line);color:var(--ink-soft);padding:6px 13px;border-radius:30px}
 
-<div class="ack"><div class="wrap"><p>We gather and heal on the unceded lands of the Wurundjeri people of the Kulin Nation. We pay our respects to Elders past and present.</p></div></div>
+  /* About story */
+  .story{max-width:760px;margin:0 auto;text-align:center}
+  .story p{color:var(--ink-soft);font-weight:300;font-size:1.1rem;margin-bottom:20px}
+  .story p .ital{color:var(--forest-deep)}
 
-<section id="offerings" class="pad">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow c">Our offerings</span>
-      <h2>Choose your way in.</h2>
-      <p class="lede" style="margin:18px auto 0">From a shared social sauna to the full sauna-and-massage ritual — there's a way to arrive that suits the day.</p>
-    </div>
-    <div class="offer-grid">
+  /* Vouchers */
+  .voucher-wrap{max-width:560px;margin:0 auto}
+  .voucher-card{background:var(--forest);color:var(--cream);border-radius:26px;padding:46px 44px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+  .voucher-card::before{content:"";position:absolute;top:-40%;right:-15%;width:60%;height:180%;background:radial-gradient(circle,rgba(211,137,95,.4),transparent 70%);pointer-events:none}
+  .voucher-card .vc-eyebrow{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:#f3c9a8;font-weight:600}
+  .voucher-card h2{color:var(--cream);font-size:2.4rem;margin:12px 0 18px}
+  .voucher-card p{color:#e3e7d9;font-weight:300;margin-bottom:14px;position:relative}
+  .voucher-card .vc-amounts{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}
+  .voucher-card .vc-amounts span{border:1px solid rgba(255,255,255,.3);border-radius:30px;padding:8px 18px;font-family:var(--serif);font-size:1.1rem}
+  .voucher-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px;max-width:760px;margin-left:auto;margin-right:auto}
+  .voucher-step{text-align:center}
+  .voucher-step .vs-num{width:42px;height:42px;border-radius:50%;background:var(--clay);color:var(--cream);font-family:var(--serif);font-size:1.3rem;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+  .voucher-step h4{font-family:var(--serif);font-size:1.15rem;color:var(--forest-deep);margin-bottom:6px;font-weight:500}
+  .voucher-step p{font-size:.9rem;color:var(--ink-soft);font-weight:300}
 
-      <div class="offer reveal">
-        <div class="offer-top"><span class="o-kind">Communal</span><h3>The Communal Sauna</h3></div>
-        <div class="o-price"><span class="amt"><sup>$</sup>20</span><span class="o-per">per person</span></div>
-        <p class="o-desc">A shared woodfired session — drop in, share the heat, and let the day slow down alongside others. Our easiest, most social way to sauna.</p>
-        <ul class="o-feat">
-          <li>30 minutes in the barrel</li>
-          <li>Shared with other guests</li>
-          <li>Towels &amp; herbal tea included</li>
-        </ul>
-        <a href="#book" class="btn ghost o-btn" data-offer="communal">Book a session</a>
-      </div>
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
+  .contact-info .row{display:flex;gap:16px;align-items:flex-start;margin-bottom:26px}
+  .contact-info .ic{flex:none;width:42px;height:42px;border-radius:50%;background:var(--paper-2);display:flex;align-items:center;justify-content:center;color:var(--clay)}
+  .contact-info .lab{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:3px}
+  .contact-info .val{color:var(--forest-deep);font-size:1.05rem}
+  .contact-info .val a:hover{color:var(--clay)}
+  .contact-form{background:var(--cream);border:1px solid var(--line);border-radius:24px;padding:34px}
+  .contact-form .field{margin-bottom:18px}
+  .contact-form label{display:block;font-size:.78rem;letter-spacing:.04em;color:var(--ink-soft);font-weight:600;margin-bottom:7px}
+  .contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-family:var(--sans);font-size:.95rem;color:var(--ink);transition:.2s}
+  .contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:none;border-color:var(--clay);background:#fff}
+  .contact-form textarea{resize:vertical;min-height:120px}
+  .contact-form .btn{width:100%;justify-content:center;margin-top:6px}
+  .form-success{display:none;text-align:center;padding:30px 0}
+  .form-success.show{display:block}
+  .form-success .check{width:60px;height:60px;border-radius:50%;background:var(--paper-2);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+  .form-success h3{color:var(--forest-deep);font-size:1.5rem;margin-bottom:8px}
+  .form-success p{color:var(--ink-soft);font-weight:300}
 
-      <div class="offer reveal">
-        <div class="offer-top"><span class="o-kind">Private · for two</span><h3>The Private Barrel</h3></div>
-        <div class="o-price"><span class="amt"><sup>$</sup>35</span><span class="o-per">per person · for two</span></div>
-        <p class="o-desc">The whole barrel to yourselves. Just you and one other — a quieter, more intimate heat with no one else to share it.</p>
-        <ul class="o-feat">
-          <li>30 minutes, barrel to yourselves</li>
-          <li>Up to two people</li>
-          <li>Towels &amp; herbal tea included</li>
-        </ul>
-        <a href="#book" class="btn ghost o-btn" data-offer="private">Book the barrel</a>
-      </div>
-
-      <div class="offer feature reveal">
-        <span class="o-flag">Most loved</span>
-        <div class="offer-top"><span class="o-kind">The signature ritual</span><h3>The Ember &amp; Earth Journey</h3></div>
-        <div class="o-price"><span class="amt"><sup>$</sup>180</span><span class="o-per">per person</span></div>
-        <p class="o-desc">The full ritual: a private barrel sauna for two, then a 60-minute massage each. Heat to open the body, hands to release it.</p>
-        <ul class="o-feat">
-          <li>30-min private sauna for two</li>
-          <li>60-min massage each</li>
-          <li>Robe, towels &amp; herbal tea included</li>
-        </ul>
-        <a href="#book" class="btn clay o-btn" data-offer="journey">Book the journey</a>
-      </div>
-
-      <div class="offer reveal">
-        <div class="offer-top"><span class="o-kind">Standalone</span><h3>Remedial Massage</h3></div>
-        <div class="o-price"><span class="amt"><sup>$</sup>150</span><span class="o-per">weekends · 60 min</span></div>
-        <p class="o-desc">A full hour of remedial &amp; relaxation massage on its own — tailored to where you carry tension, no sauna required.</p>
-        <ul class="o-feat">
-          <li>60 minutes on the table</li>
-          <li>Remedial or relaxation focus</li>
-          <li>Add a sauna anytime</li>
-        </ul>
-        <a href="#book" class="btn ghost o-btn" data-offer="massage">Book a massage</a>
-      </div>
-
-    </div>
-    <p class="o-note reveal">Prices are a guide for launch and may be refined. Have something else in mind — a group booking, a gift, a longer massage? <a href="mailto:hello@emberandearth.com.au">Just ask.</a></p>
-  </div>
-</section>
-
-<section id="ritual" class="pad" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Inside the Journey</span>
-      <h2>Two ancient rituals,<br>ninety minutes.</h2>
-      <p class="lede" style="margin-top:20px">Heat to open the body, then slow hands-on work to release it. Together they go further than either could alone.</p>
-    </div>
-    <div class="ritual-grid">
-      <div class="step reveal">
-        <div class="step-img"><span class="tag">First · the heat</span>
-          <img src="sauna.png" alt="Woodfired barrel sauna glowing at golden hour in the forest">
-        </div>
-        <div class="step-body">
-          <div class="dur">30 <span>minutes</span></div>
-          <h3>The woodfired sauna</h3>
-          <p>Step into the barrel and let dry woodfired heat do its quiet work — easing tight muscles, opening the lungs, melting the week away. Crackling fire, cedar scent, birdsong through the window.</p>
-        </div>
-      </div>
-      <div class="step reveal">
-        <div class="step-img"><span class="tag">Then · the touch</span>
-          <img src="massage.png" alt="Therapist giving a relaxing back massage">
-        </div>
-        <div class="step-body">
-          <div class="dur">60 <span>minutes</span></div>
-          <h3>The massage</h3>
-          <p>Warmed and softened, you move to the table for a full hour of remedial &amp; relaxation massage. With the body already loose from the heat, the work lands deeper and gentler.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="experience" class="pad">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow c">What to expect</span>
-      <h2>A gentle rhythm of<br>heat &amp; stillness.</h2>
-    </div>
-    <div class="exp-grid">
-      <div class="exp reveal"><div class="ei"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Arrive a little early</h3><p>Come 10 minutes before to settle in, change, and meet your therapist. The slowing down starts at the gate.</p></div>
-      <div class="exp reveal"><div class="ei"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14c2-4 14-4 16 0M7 14c0 3 2 5 5 5s5-2 5-5"/><path d="M12 4v3"/></svg></div><h3>The heat, your way</h3><p>Sit high for intensity or low for a softer warmth, and step out to cool whenever you like. Your body sets the limit.</p></div>
-      <div class="exp reveal"><div class="ei"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12c3-7 11-7 14 0-3 7-11 7-14 0z"/><circle cx="12" cy="12" r="2.4"/></svg></div><h3>Tailored hands-on work</h3><p>Tell us where you carry tension. Each massage is shaped to you — from deep remedial release to slow, restorative pressure.</p></div>
-      <div class="exp reveal"><div class="ei"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c5-3 8-7 8-12a8 8 0 10-16 0c0 5 3 9 8 12z"/></svg></div><h3>Bring almost nothing</h3><p>Towels, robe, water and herbal tea are provided. Bring a swimsuit if you'd prefer one in the sauna, and an open mind.</p></div>
-      <div class="exp reveal"><div class="ei"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l5-5 4 4 8-9"/><path d="M16 7h5v5"/></svg></div><h3>Ease back out</h3><p>Afterwards, linger in the gardens with a cup of tea. Hydrate, move slowly, and let the calm carry into your day.</p></div>
-      <div class="exp reveal"><div class="ei"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div><h3>Looked after</h3><p>Pregnant, recovering from injury, or managing a health condition? Let us know when booking and we'll adapt the session safely.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="woodfired" class="pad">
-  <div class="wrap">
-    <div class="feature">
-      <div class="feature-art reveal">
-        <div class="fimg"><img src="sauna.png" alt="The woodfired barrel sauna at golden hour, steam rising from the chimney"></div>
-        <div class="badge"><div class="bn">100%</div><div class="bl">Woodfired with sustainably sourced local timber</div></div>
-      </div>
-      <div class="feature-copy">
-        <span class="eyebrow reveal">Why woodfired</span>
-        <h2 class="reveal">Fire is the<br>whole point.</h2>
-        <p class="reveal">Electric saunas are convenient. A woodfired barrel is something else entirely — a living heat with the soft crackle of flame, the scent of timber and a warmth that feels rounder and deeper. It asks you to slow down, the way good rituals always have.</p>
-        <ul class="feat-list">
-          <li class="reveal"><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><span><strong>Lower footprint.</strong> Sustainably sourced local firewood instead of a constant draw on the grid — fitting for a community built around regeneration.</span></li>
-          <li class="reveal"><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><span><strong>A richer heat.</strong> Woodfire gives a gentle, enveloping warmth and that unmistakable scent and sound you simply can't bottle.</span></li>
-          <li class="reveal"><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><span><strong>Rooted in place.</strong> Heated and held within the gardens of Yarra Valley ECOSS, among the people growing a more sustainable valley.</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="location" class="pad">
-  <div class="wrap">
-    <div class="loc">
-      <div class="loc-img reveal"><img src="ecoss.jpeg" alt="The community produce market at Yarra Valley ECOSS"></div>
-      <div class="loc-copy">
-        <span class="eyebrow reveal">Find us</span>
-        <h2 class="reveal">Tucked in the<br>gardens at ECOSS.</h2>
-        <p class="reveal">You'll find the barrel at Yarra Valley ECOSS — a thriving community environment hub and organic farm in Wesburn, home to a much-loved produce market, food gardens and a native nursery. It's about 70km east of Melbourne, deep in the Upper Yarra.</p>
-        <div class="loc-detail">
-          <div class="row reveal"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21c5-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 3 8 8 12z"/><circle cx="12" cy="9" r="2.6"/></svg></span><div><div class="lab">Where</div><div class="val">Yarra Valley ECOSS · 711 Old Warburton Rd, Wesburn VIC 3799</div></div></div>
-          <div class="row reveal"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></span><div><div class="lab">When</div><div class="val">Thursday – Sunday · sessions from 9:00am</div></div></div>
-          <div class="row reveal"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg></span><div><div class="lab">Reach us</div><div class="val">hello@emberandearth.com.au</div></div></div>
-        </div>
-        <a href="#book" class="btn clay" style="margin-top:28px" onclick="openBooking();return false;">Check availability</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="book" class="pad">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow c">Reserve your session</span>
-      <h2>Book your visit.</h2>
-    </div>
-    <div class="booking reveal">
-      <div class="booking-head">
-        <div><h3>Book &amp; pay securely</h3><div class="pkg">Choose your offering below — you'll pick a time and pay through our secure Square checkout.</div></div>
-        <div class="pr">Secured by<b style="font-style:normal;font-size:1.05rem;color:var(--forest-deep)">Square</b></div>
-      </div>
-      <div class="booking-body">
-        <div class="book-list">
-          <div class="book-row">
-            <div class="br-info"><span class="br-name">The Communal Sauna</span><span class="br-meta">Shared woodfired sauna · 30 min · $20 pp</span></div>
-          </div>
-          <div class="book-row">
-            <div class="br-info"><span class="br-name">The Private Barrel</span><span class="br-meta">Private sauna for two · 30 min · $35 pp</span></div>
-          </div>
-          <div class="book-row feature">
-            <div class="br-info"><span class="br-name">The Ember &amp; Earth Journey <span class="br-flag">Most loved</span></span><span class="br-meta">Private sauna for two + 60-min massage each · 90 min · $180 pp</span></div>
-          </div>
-          <div class="book-row">
-            <div class="br-info"><span class="br-name">Remedial Massage</span><span class="br-meta">60-min massage · weekends · $150</span></div>
-          </div>
-        </div>
-        <div class="book-cta">
-          <p class="book-cta-label">Choose your session, time &amp; pay securely:</p>
-          <!-- Square's official booking button — opens Square's booking popup -->
-          <div class="square-btn-wrap">
-            <!-- Start Square Appointments Embed code --><a style=" background-color: #006aff; color: white; height: 40px; text-transform: uppercase; font-family: 'Square Market', 'helvetica neue', helvetica, arial, sans-serif; letter-spacing: 1px; line-height: 38px; padding: 0 28px; border-radius: 3px; font-weight: 500; font-size: 14px; cursor: pointer; display: inline-block; " href="https://app.squareup.com/appointments/buyer/widget/eo1shb57awt2tq/LN5XKNGM1B7KW">Book an appointment</a><!-- End Square Appointments Embed code -->
-          </div>
-        </div>
-        <p class="book-note">Payment is taken at the time of booking to secure your session. Need a hand or planning a group? Email <a href="mailto:hello@emberandearth.com.au">hello@emberandearth.com.au</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="faq" class="pad">
-  <div class="wrap">
-    <div class="sec-head center reveal"><span class="eyebrow c">Good to know</span><h2>Questions, answered.</h2></div>
-    <div class="faq-list">
-      <div class="faq reveal"><button>What do I need to bring?<span class="pm">+</span></button><div class="ans"><p>Very little. We provide towels, a robe, drinking water and herbal tea. Bring a swimsuit if you'd prefer to wear one in the sauna, plus a hair tie and a sense of unhurriedness. Leave your phone in the car if you can.</p></div></div>
-      <div class="faq reveal"><button>Is the woodfired sauna very hot?<span class="pm">+</span></button><div class="ans"><p>It's a warm, enveloping dry heat — and you're always in control. Sit higher for more intensity, lower for a softer warmth, and step out to cool whenever you like. Your therapist tends the fire and the timing so you can simply relax.</p></div></div>
-      <div class="faq reveal"><button>Can I book the sauna or massage on its own?<span class="pm">+</span></button><div class="ans"><p>Absolutely. You can book a communal sauna, a private barrel for two, a standalone massage, or the full Journey that pairs a private sauna with a massage each. Whatever you choose, the heat and the hands-on work are designed to complement one another.</p></div></div>
-      <div class="faq reveal"><button>Is it safe during pregnancy or with a health condition?<span class="pm">+</span></button><div class="ans"><p>Often, yes — with adjustments. Sauna heat and some massage techniques are modified during pregnancy and for certain conditions. Please tell us when you book so we can tailor your session, and check with your doctor if you're unsure. We may shorten or skip the heat where it's wise to.</p></div></div>
-      <div class="faq reveal"><button>What's your cancellation policy?<span class="pm">+</span></button><div class="ans"><p>Life happens. Reschedule or cancel with at least 24 hours' notice at no charge. Because we light the fire especially for you, late cancellations may incur a small fee.</p></div></div>
-      <div class="faq reveal"><button>How do I find you at ECOSS?<span class="pm">+</span></button><div class="ans"><p>Enter Yarra Valley ECOSS at 711 Old Warburton Rd, Wesburn, and follow the signs toward the gardens — the barrel sits among the food forest. There's plenty of parking on site, and we'll send clear directions with your confirmation.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a class="logo" href="#top"><svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 4c-1.2 5-6 6-6 11a6 6 0 0012 0c0-3-2-5-3-8-1 2-2 3-3 5z" fill="#bc6a42"/><path d="M16 10c-.6 2.4-3 3-3 6.2A3 3 0 0019 16c0-1.5-1-2.5-1.6-4-.5 1-1 1.3-1.4 1.9z" fill="#d3895f"/></svg> Ember <span class="amp">&amp;</span> Earth</a>
-        <p>Woodfired sauna &amp; massage among the gardens of Yarra Valley ECOSS. Heat, breath and touch on Wurundjeri Country.</p>
-      </div>
-      <div class="foot-col"><h4>Explore</h4><a href="#offerings">Offerings</a><a href="#experience">Experience</a><a href="#woodfired">Why Woodfired</a><a href="#faq">FAQ</a></div>
-      <div class="foot-col"><h4>Visit &amp; book</h4><a href="#book">Book a session</a><a href="#location">711 Old Warburton Rd, Wesburn</a><a href="mailto:hello@emberandearth.com.au">hello@emberandearth.com.au</a><a href="https://ecoss.org.au" target="_blank" rel="noopener">Yarra Valley ECOSS ↗</a></div>
-    </div>
-    <div class="foot-bottom"><span>© <span id="yr"></span> Ember &amp; Earth Sauna &amp; Massage</span><span style="font-style:italic">Always lit with care, for people &amp; place.</span></div>
-  </div>
-</footer>
-
-<script>
-  const hdr=document.getElementById('hdr');
-  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40));
-  const navlinks=document.getElementById('navlinks');
-  document.getElementById('menuToggle').onclick=()=>navlinks.classList.toggle('open');
-  navlinks.querySelectorAll('a').forEach(a=>a.onclick=()=>navlinks.classList.remove('open'));
-  document.getElementById('yr').textContent=new Date().getFullYear();
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
-  document.querySelectorAll('.faq button').forEach(b=>b.onclick=()=>{
-    const f=b.parentElement, open=f.classList.contains('open');
-    document.querySelectorAll('.faq').forEach(x=>{x.classList.remove('open');x.querySelector('.ans').style.maxHeight=null});
-    if(!open){f.classList.add('open');const a=f.querySelector('.ans');a.style.maxHeight=a.scrollHeight+'px'}
-  });
-  /* Booking — open Square's secure booking & payment */
-  const SQUARE_URL='https://app.squareup.com/appointments/buyer/widget/eo1shb57awt2tq/LN5XKNGM1B7KW';
-  function openBooking(){ window.open(SQUARE_URL,'_blank','noopener'); }
-  /* Hero / nav / location / offering-card CTAs all open Square */
-  document.querySelectorAll('.o-btn').forEach(b=>b.addEventListener('click',e=>{
-    e.preventDefault();
-    openBooking();
-  }));
-</script>
-</body>
-</html>
+  @media(max-width:820px){
+    .prac-grid,.contact-grid{grid-template-columns:1fr}
+    .voucher-steps{grid-template-columns:1fr;gap:30px;max-width:340px}
+    .page-hero{padding:130px 0 48px}
+  }
